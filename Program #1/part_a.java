@@ -8,10 +8,6 @@
  *  Write a Java program to create nStudent objects and print the USN, Name, Branch, and Phone Number 
  *  of these objects with suitable headings.
  * 
- * PART B::
- *  Write a Java program to implement the Stack using arrays. Write Push(), Pop(), and Display() methods 
- *  to demonstrate its working.
- *
  * 
  * @author Akhil Kokani
  */
@@ -60,12 +56,22 @@ public class source {
 }
 
 public class student {
-
+  
+  // Class Globals
   String usn;
   String name;
   String branch;
   int phone_number;
 
+  /**
+   * Used to add new student record.
+   *
+   * @param string u
+   * @param string n
+   * @param string b
+   * @param int u
+   * @return void
+   */
   public void add ( String u, String n, String b, int p ) {
 
     this.usn = u;
@@ -74,8 +80,12 @@ public class student {
     this.phone_number = p;
   }
 
-  public void display (  ) {
-
+  /**
+   * Used to display student details
+   *
+   * @return void
+   */
+  public void display() {
     System.out.format ( "%s%20s%20s%20d\n", this.usn, this.name, this.branch, this.phone_number );
   }
 }
