@@ -1,1 +1,2 @@
 # Solving Problem Statements in Python
+This project is related to my <a href="https://www.youtube.com/channel/UCaJWk3J3DX-oCddsgw4bTNw">YouTube channel</a>, in which I'll be series of problem statements using Python Programming Language, and explaining every line of how it works.
