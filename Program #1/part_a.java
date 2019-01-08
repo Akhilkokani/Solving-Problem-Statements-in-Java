@@ -1,11 +1,11 @@
 /**
  * PART A::
- *  Create a Java class called Student with the following details as variables within it. 
- *  (i) USN 
- *  (ii) Name 
- *  (iii) Branch 
+ *  Create a Java class called Student with the following details as variables within it.
+ *  (i) USN
+ *  (ii) Name
+ *  (iii) Branch
  *  (iv) Phone Number
- *  Write a Java program to create nStudent objects and print the USN, Name, Branch, and Phone Number 
+ *  Write a Java program to create nStudent objects and print the USN, Name, Branch, and Phone Number
  *  of these objects with suitable headings.
  * 
  * 
@@ -23,50 +23,84 @@ public class part_a {
     String name = "";
     String branch = "";
     int phone_number = 0;
+    int user_choice = 2;
+    int n_students = 1;
 
     // Scanner to scan inputs from user
     // Declaring 10 student objects
     Scanner scan = new Scanner ( System.in );
     student std[] = new student[10];
 
-    // Scanning two student details from user
-    for ( int i = 0; i < 2; i++ ) {
+    // Showing user program menu
+    System.out.println ( "MENU:\n 1: Insert N student Details.\n 2: Display Student Details." );
 
-      // Initialising student object
-      // Telling user which student detail he/she is entering
-      std[i] = new student();
-      System.out.println ( "Enter " + (i + 1) + " student data." );
+    // Iterating through user choice
+    while ( user_choice <= 2 ) {
 
-      // USN
-      System.out.print ( "Enter USN: " );
-      usn = scan.nextLine();
+      // Asking user to enter their preferred choice
+      System.out.print ( "Enter your choice: " );
+      user_choice = scan.nextInt();
 
-      // Name
-      System.out.print ( "Enter Name: " );
-      name = scan.nextLine();
+      // Determing what was user's choice
+      switch ( user_choice ) {
 
-      // Branch
-      System.out.print ( "Enter Branch: " );
-      branch = scan.nextLine();
+        // Insert N number of students
+        case 1:
+          // Asking user to enter N value
+          System.out.print ( "Enter N value: " );
+          n_students = scan.nextInt();
 
-      // Phone Number
-      System.out.print ( "Enter Phone Number: " );
-      phone_number = scan.nextInt();
+          // Swalloing \n character
+          scan.nextLine();
 
-      // Swalloing \n character
-      // Adding student record
-      scan.nextLine();
-      std[i].add ( usn, name, branch, phone_number );
+          // Scanning two student details from user
+          for ( int i = 0; i < n_students; i++ ) {
+
+            // Initialising student object
+            // Telling user which student detail he/she is entering
+            std[i] = new student();
+            System.out.println ( "Enter " + (i + 1) + " student data." );
+
+            // USN
+            System.out.print ( "Enter USN: " );
+            usn = scan.nextLine();
+
+            // Name
+            System.out.print ( "Enter Name: " );
+            name = scan.nextLine();
+
+            // Branch
+            System.out.print ( "Enter Branch: " );
+            branch = scan.nextLine();
+
+            // Phone Number
+            System.out.print ( "Enter Phone Number: " );
+            phone_number = scan.nextInt();
+
+            // Swalloing \n character
+            // Adding student record
+            scan.nextLine();
+            std[i].add ( usn, name, branch, phone_number );
+          }
+          break;
+
+        // Displaying all student details
+        case 2:
+          for ( int i = 0; i < n_students; i++ ) {
+            System.out.println ( "\n" + (i + 1) + " student data:" );
+            std[i].display();
+          }
+          break;
+          
+        // Quit the program, due to invalid choice
+        default:
+          System.out.println ( "Program Ended" );
+          break;
+      }
     }
 
     // Closing scanner
     scan.close();
-
-    // Displaying student details
-    for ( int i = 0; i < 2; i++ ) {
-      System.out.println ( "Displaying " + i + " student data." );
-      std[i].display();
-    }
   }
 }
 
