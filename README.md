@@ -147,7 +147,7 @@ This project is related to my <a href="https://www.youtube.com/channel/UCaJWk3J3
 #### Program #11
 <div style="margin-left: 1em;">
   <p>
-    Design and implement in Java to find a <b>subset</b> of a given set <br><b>S</b>={Sl, S2,.....,Sn} of <b>n</b> positive integers whose SUM is equal to a given positive integer <b>d</b>. For example, if S ={1, 2, 5, 6, 8} and d= 9, there are two solutions {1,2,6} and {1,8}. Display a suitable message, if the given problem instance doesn't have a solution.
+    Design and implement in Java to find a <b>subset</b> of a given set <b>S</b>={Sl, S2,.....,Sn} of <b>n</b> positive integers whose SUM is equal to a given positive integer <b>d</b>. For example, if S ={1, 2, 5, 6, 8} and d= 9, there are two solutions {1,2,6} and {1,8}. Display a suitable message, if the given problem instance doesn't have a solution.
   </p>
 </div>
 
@@ -160,4 +160,4 @@ This project is related to my <a href="https://www.youtube.com/channel/UCaJWk3J3
   </p>
 </div>
 
-<hr>
+*END*
