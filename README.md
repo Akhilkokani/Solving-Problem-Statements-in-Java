@@ -3,7 +3,7 @@ This project is related to my <a href="https://www.youtube.com/channel/UCaJWk3J3
 
 **Playlist:** https://youtu.be/xEhOcZrKCRw
 
-#### Program #1asd
+#### Program #1
 
 <b style="color: #727272">Part A</b>
 <div style="margin-left: 1em;">
