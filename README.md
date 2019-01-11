@@ -1,9 +1,9 @@
 # Solving Problem Statements in Java
 This project is related to my <a href="https://www.youtube.com/channel/UCaJWk3J3DX-oCddsgw4bTNw">YouTube channel</a>, in which I'll be solving series of problem statements using Java, and explaining every line of how it works.
 
-<center>Video Links Coming Soon...</center>
+**Playlist:** https://youtu.be/xEhOcZrKCRw
 
-#### Program #1
+#### Program #1asd
 
 <b style="color: #727272">Part A</b>
 <div style="margin-left: 1em;">
