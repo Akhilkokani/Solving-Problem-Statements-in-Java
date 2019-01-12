@@ -32,6 +32,8 @@ This project is related to my <a href="https://www.youtube.com/channel/UCaJWk3J3
   </p>
 </div>
 
+**Video:** https://youtu.be/7qvWrS0dZkQ
+
 <hr>
 
 #### Program #2
