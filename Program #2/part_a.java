@@ -67,7 +67,7 @@ public class part_a {
         
         // Display all staff details
         case 4:
-          // No details of any category were entered
+          // Anyone details have been entered
           if ( 
             counter[0] != -1 || 
             counter[1] != -1 || 
@@ -281,6 +281,6 @@ public class Contract extends Staff {
 
     // Calling super class display function
     super.display();
-    System.out.println ( "Staff Skills: " + period );
+    System.out.println ( "Staff Period: " + period );
   }
 }
