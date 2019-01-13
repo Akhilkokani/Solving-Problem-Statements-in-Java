@@ -32,7 +32,7 @@ public class part_a {
     Contract contract[] = new Contract [ max_number_of_staff ];
 
     // Printing menu on screen
-    System.out.println ( "MENU:\n 1: Add new staff with Teaching Details.\n 2: Add new staff with Technical Details.\n 3: Add new staff with Contract Skills.\n 4: Display all staff details.\n" );
+    System.out.println ( "MENU:\n 1: Add new staff with Teaching Details.\n 2: Add new staff with Technical Details.\n 3: Add new staff with Contract Details.\n 4: Display all staff details.\n" );
 
     // Intialising all counters
     // Here, counter[0] is for teaching, counter[1] is for technical, and counter[2] for contract
@@ -281,6 +281,6 @@ public class Contract extends Staff {
 
     // Calling super class display function
     super.display();
-    System.out.println ( "Staff Skills: " + period );
+    System.out.println ( "Staff Period: " + period );
   }
 }
