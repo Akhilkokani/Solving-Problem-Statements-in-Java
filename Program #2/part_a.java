@@ -107,7 +107,7 @@ public class part_a {
             System.out.println ( "No details entered." );
           break;
 
-        // Quir program, invalid choice
+        // Quit program, invalid choice
         default:
           System.out.println ( "Program Ended." );
           break;
