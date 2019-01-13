@@ -67,7 +67,7 @@ public class part_a {
         
         // Display all staff details
         case 4:
-          // No details of any category were entered
+          // Anyone details have been entered
           if ( 
             counter[0] != -1 || 
             counter[1] != -1 || 
