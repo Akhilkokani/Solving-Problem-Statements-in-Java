@@ -38,6 +38,8 @@ This project is related to my <a href="https://www.youtube.com/channel/UCaJWk3J3
 
 #### Program #2
 
+**Video:** https://youtu.be/dOn0gRkW0aQ
+
 <b style="color: #727272">Part A</b>
 <div style="margin-left: 1em;">
   <p>
