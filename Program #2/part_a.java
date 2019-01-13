@@ -113,6 +113,9 @@ public class part_a {
           break;
       }
     }
+
+    // Closing scanner
+    scan.close();
   }
 }
 
