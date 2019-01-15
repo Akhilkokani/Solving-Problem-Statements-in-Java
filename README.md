@@ -62,7 +62,7 @@ This project is related to my <a href="https://www.youtube.com/channel/UCaJWk3J3
 <b style="color: #727272">Part A</b>
 <div style="margin-left: 1em;">
   <p>
-    Write a Java program to read two integers a andb. Compute a/b and print, when b is not zero. Raise an exception when b is equal to zero.
+    Write a Java program to read two integers a and b. Compute a/b and print, when b is not zero. Raise an exception when b is equal to zero.
   </p>
 </div>
 
