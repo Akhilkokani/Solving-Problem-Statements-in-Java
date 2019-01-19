@@ -55,7 +55,7 @@ public class source {
     QS.sort ( random_numbers, 0, n-1 );
     stopTime = System.nanoTime();
 
-    // Using Formula "(nano-seconds)/1e9" displyaing time taken to sort elements
+    // Using Formula "(nano-seconds)/1e9" displaying time taken to sort elements
     System.out.println ( "Time taken to sort " + n + " numbers is: " + ((stopTime - startTime)/ 1000000000) + " seconds." );
 
     // Displaying user sorted array
