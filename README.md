@@ -66,7 +66,7 @@ This project is related to my <a href="https://www.youtube.com/channel/UCaJWk3J3
   </p>
 </div>
 
-<b style="color: #727272">Part B</b>
+<b style="color: #727272"><a href="https://youtu.be/Hk5OECnavYc">Part B</a></b>
 <div style="margin-left: 1em;">
   <p>
     Write a Java program that implements a multi-thread application that has three threads. First thread generates a random integer for every 1 second; second thread computes the square of the number and prints; third thread will print the value of cube of the number.
