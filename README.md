@@ -76,6 +76,8 @@ This project is related to my <a href="https://www.youtube.com/channel/UCaJWk3J3
 <hr>
 
 #### Program #4
+
+**Video:** https://youtu.be/d3Ba2ke9MK0
 <div style="margin-left: 1em;">
   <p>
     Sort a given set of n integer elements using <b>Quick Sort</b> method and compute its time complexity. Run the program for varied values of <i>n>5000</i> and record the time taken to sort. Plot a graph of the time taken versus non graph sheet. The elements can be read from a file or can be generated using the random number generator. Demonstrate using Java how the divide-and-conquer method works along with its time complexity analysis: worst case, average case and best case.
