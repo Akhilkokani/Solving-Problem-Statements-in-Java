@@ -30,6 +30,9 @@ public class source {
     System.out.print ( "Enter value of N: " );
     number_of_elements = scan.nextInt();
 
+    // Closing scanner as we are not going any values from anymore
+    scan.close();
+
     System.out.println ( "Random Numbers: " );
     for ( int i = 0; i < number_of_elements; i++ ) {
 
@@ -43,7 +46,7 @@ public class source {
 
     // Displaying user sorted array
     System.out.println ( "\nSorted Array:" );
-    for (int i = 0; i < number_of_elements; i++) {
+    for ( int i = 0; i < number_of_elements; i++ ) {
       System.out.print ( array[i] + " " );
     }
 
