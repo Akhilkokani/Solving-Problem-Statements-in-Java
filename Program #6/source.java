@@ -173,22 +173,4 @@ public class knapsack {
     System.out.println();
     return;
   }
-
-
-  
-  /**
-   * Solves using Greedy Method.
-   *
-   *
-   *
-   * @param int weights
-   * @param int values
-   * @param int knapsack_weight
-   * @param int number_of_elements
-   * @return void
-   */
-  public void greedy ( int[] weights, int[] values, int knapsack_weight, int number_of_elements ) {
-
-    
-  }
 }
