@@ -1,3 +1,14 @@
+/**
+ * Implement in Java, the 0/1 Knapsack problem using:
+ * 1. Dynamic Programming method.
+ * 2. Greedy method.
+ *
+ *
+ *
+ *
+ * @author Akhil Kokani
+ */
+
 import java.util.Scanner;
 
 public class source {
@@ -34,6 +45,8 @@ public class source {
     knapsack_weight = scan.nextInt();
 
     kSack.dynamic ( weights, values, knapsack_weight, number_of_elements );
+
+    scan.close();
   }
 }
 
@@ -96,5 +109,23 @@ public class knapsack {
         System.out.print ( i + " " );
     }
     System.out.println ( "" );
+  }
+
+
+  
+  /**
+   * Solves using Greedy Method.
+   *
+   *
+   *
+   * @param int weights
+   * @param int values
+   * @param int knapsack_weight
+   * @param int number_of_elements
+   * @return void
+   */
+  public void greedy ( int[] weights, int[] values, int knapsack_weight, int number_of_elements ) {
+
+    
   }
 }
