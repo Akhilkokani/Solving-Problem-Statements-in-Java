@@ -29,7 +29,7 @@ public class source {
     number_of_elements = scan.nextInt();
 
     // Scanning weight of every element.
-    System.out.println ( "ENTER WEIGHTS FOR " + number_of_elements + " ELEMENTS: " );
+    System.out.println ( "\nENTER WEIGHTS FOR " + number_of_elements + " ELEMENTS: " );
     for ( int i = 1; i <= number_of_elements; i++ ) {
 
       System.out.print ( "Enter weight of " + i + " element: " );
@@ -37,7 +37,7 @@ public class source {
     }
 
     // Scanning profit of every element.
-    System.out.println ( "ENTER VALUES FOR " + number_of_elements + " ELEMENTS: " );
+    System.out.println ( "\nENTER VALUES FOR " + number_of_elements + " ELEMENTS: " );
     for ( int i = 1; i <= number_of_elements; i++ ) {
 
       System.out.print ( "Enter value of " + i + " element: " );
@@ -45,10 +45,15 @@ public class source {
     }
 
     // Scanning maximum capacity of knapsack.
-    System.out.print ( "Enter Knapsack Weight: " );
+    System.out.print ( "\nEnter Knapsack Weight: " );
     knapsack_weight = scan.nextInt();
 
+    // Solving it using Dyanmic Method.
+    System.out.println ( "\nDYNAMIC METHOD:" );
+    kSack.dynamic ( weights, values, knapsack_weight, number_of_elements );
+
     // Solving it using Greedy Method.
+    System.out.println ( "\nGREEDY METHOD:" );
     kSack.greedy ( weights, values, knapsack_weight, number_of_elements );
   }
 }
@@ -67,7 +72,66 @@ public class knapsack {
    * @return void
    */
   public void dynamic ( int[] weights, int[] values, int knapsack_weight, int number_of_elements ) {
-    // Coming Soon... ;)
+
+    int[][] solution = new int [ number_of_elements + 1 ][ knapsack_weight + 1 ];   // To store knapsack solution.
+    int[] selected = new int [ number_of_elements + 1 ];                            // To store which items have been selected.
+
+    // Temporary variables.
+    int i = 0;
+    int j = 0;
+
+    // Finding solution.
+    for ( i = 0; i <= number_of_elements; i++ ) {
+      for ( j = 0; j <= knapsack_weight; j++ ) {
+
+        // Initially setting first row and first column values to zero.
+        if ( i == 0 || j == 0 ) {
+          solution[ i ][ j ] = 0;
+        }
+        
+        // If current object's weight is greater than current weight (column)
+        // then, current object cannot be added in current column so, add the previous row value only.
+        else if ( weights[i] > j ) {
+          solution[ i ][ j ] = solution[ i - 1 ][ j ];
+        } 
+
+        // Otherwise, apply formula i.e.
+        // Compare previous row's value and diagonal block value and select whichever one is maximum.
+        else {
+          solution[ i ][ j ] = Math.max ( solution[i-1][j], ( solution[i-1][j - weights[i]] + values[i]) );
+        }
+      }
+    }
+
+    System.out.println ( "Total Profit: " + solution[number_of_elements][knapsack_weight] );
+
+    // Initially not selecting any element.
+    for ( i = 0; i < number_of_elements + 1; i++ ) {
+      selected[i] = 0;
+    }
+
+    i = number_of_elements;     // Pointing to last row index.
+    j = knapsack_weight;        // Pointing to last column index.
+
+    // Using backtracking tracing which items have been selected.
+    while ( i > 0 && j > 0 ) {
+
+      // If current item's value is different than previous row's value
+      // then select that item.
+      if ( solution[i][j] != solution[i-1][j] ) {
+        selected[i] = 1;
+        j = j - weights[i];
+      }
+      i -= 1;
+    }
+
+    // Displaying items which have been selected
+    System.out.print ( "Items Selected: " );
+    for ( i = 1; i < number_of_elements + 1; i++ ) {
+      if ( selected[i] == 1 )
+        System.out.print ( i + " " );
+    }
+    System.out.println();
   }
 
 
@@ -158,7 +222,7 @@ public class knapsack {
         selected_items [ highest_ratio_index ] = -2;
       }
 
-      // Resetting current item's ratio value to -1, so that next item it won't be selected again.
+      // Resetting current item's ratio value to -1, so that next time it won't be selected again.
       // Reducing number of item to iterate by 1.
       ratios [ highest_ratio_index ] = -1;
       number_of_elements -= 1;
