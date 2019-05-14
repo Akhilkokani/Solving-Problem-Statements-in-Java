@@ -98,6 +98,8 @@ This project is related to my <a href="https://www.youtube.com/channel/UCaJWk3J3
 <hr>
 
 #### Program #6
+
+**Video:** https://youtu.be/X8pzU3BLE7c
 <div style="margin-left: 1em;">
   <p>
     Implement in Java, the <b>0/1 Knapsack</b> problem using:
