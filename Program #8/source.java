@@ -20,7 +20,7 @@ public class Kruskal {
    *
    *
    *
-   * @param int  m
+   * @param int  m    - Vertex, whose parent vertex has to be found.
    * @return int
    */
   public int find ( int m ) {
@@ -38,8 +38,8 @@ public class Kruskal {
    * vertice(s) parent's in appropriate fashion.
    *
    *
-   * @param int   i
-   * @param int   j
+   * @param int   i     - One vertex.
+   * @param int   j     - Second vertex.
    * @return void
    */
   public void union ( int i, int j ) {
