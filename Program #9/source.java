@@ -12,27 +12,43 @@ import java.util.Scanner;
 
 public class Prims {
 
+  /**
+   * Constructor which find MCST using Prims Algorithm.
+   *
+   *
+   *
+   * @param int w   - Weighted Matrix
+   * @param int n   - Number of Vertices
+   * @param int s   - Source Vertex
+   */
   Prims ( int[][] w, int n, int s ) {
 
+    // To keep a record of which all vertices have been visited
     int visited[] = new int [ 10 ];
 
-    int u = 0,
-        v = 0,
-        k = 0,
-        sum = 0,
-        flag = 0,
-        min;
+    int u = 0,          // To hold the first edge
+        v = 0,          // To hold the second edge
+        k = 0,          // Counter
+        sum = 0,        // To store the cost of Spanning Tree
+        flag = 0,       // To indicate whether MCST exists or not
+        min;            // To hold minimum edge cost
     
+    // Initially, setting all vertices as not visited
     for ( int i = 1; i <= n; i++ ) {
       visited [ i ] = 0;
     }
     
-    visited [ s ] = 1;
-    k = 1;
+    visited [ s ] = 1;    // Marking source vertex as visited
+    k = 1;                // Initialising counter
 
+    // Iterating through all vertices
     while ( k <= n-1 ) {
 
+      // Setting minimum value to highest i.e. infinity
       min = 99;
+
+      // Traversing through weighted matrix
+      // and selecting minimum edge
       for ( int i = 1; i <= n; i++ ) {
         for ( int j = 1; j <= n; j++ ) {
 
@@ -46,13 +62,16 @@ public class Prims {
         }
       }
 
-      visited [ v ] = 1;
-      sum = sum + min;
-      k += 1;
+      visited [ v ] = 1;    // Marking destination vertex as visited
+      sum = sum + min;      // Adding up the cost with current selected edge cost
+      k += 1;               // Incrementing counter
 
+      // Showing the current minimum edge to user
       System.out.println ( u + "->" + v + " = " + min );
     }
 
+    // From 'n' vertices if anyone of the vertex is not visited
+    // then MCST does not exist.
     for ( int i = 1; i <= n; i++ ) {
       if ( visited[i] == 0 ) flag = 1;
     }  
@@ -64,17 +83,21 @@ public class Prims {
   }
 
   public static void main ( String[] args ) {
-    
+
+    // To Scan inputs from user
     Scanner scan = new Scanner ( System.in );
 
+    // To store weighted matrix
     int w[][] = new int [ 10 ][ 10 ];
     
-    int s,
-        n;
+    int s,    // To store source vertex
+        n;    // To store number of vertices
 
+    // Scanning number of vertices in graph
     System.out.print ( "Enter the number of vertices: " );
     n = scan.nextInt();
     
+    // Scanning weighted matrix
     System.out.println ( "Enter the weighted graph" );
     for ( int i = 1; i <= n; i++ ) {
       for ( int j = 1; j <= n; j++ ) {
@@ -82,9 +105,11 @@ public class Prims {
       }
     }
     
+    // Scanning source vertex
     System.out.print ( "Enter the source vertex: " );
     s = scan.nextInt();
 
+    // Invoking Prims Algorithm
     Prims prims = new Prims ( w, n, s );
     
     scan.close();
