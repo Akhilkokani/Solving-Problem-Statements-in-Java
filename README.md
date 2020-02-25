@@ -113,6 +113,8 @@ This project is related to my <a href="https://www.youtube.com/channel/UCaJWk3J3
 <hr>
 
 #### Program #7
+
+**Video:** https://youtu.be/I_zVRNdS1a8
 <div style="margin-left: 1em;">
   <p>
     From a given vertex in a weighted connected graph, find shortest paths to other vertices using <b>Dijkstra's algorithm.</b> Write the program in Java.
