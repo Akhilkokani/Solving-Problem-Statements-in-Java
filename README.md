@@ -126,7 +126,7 @@ This project is related to my <a href="https://www.youtube.com/channel/UCaJWk3J3
 #### Program #8
 <div style="margin-left: 1em;">
   <p>
-    Find Minimum Cost Spanning Tree of a given connected undirected graph using <b>Kruskal'salgorithm.</b> Use Union-Find algorithms in your program.
+    Find Minimum Cost Spanning Tree of a given connected undirected graph using <b>Kruskal's algorithm.</b> Use Union-Find algorithms in your program.
   </p>
 </div>
 
