@@ -88,7 +88,7 @@ public class Kruskal {
       }
 
       // After finding edge with minimum cost i.e. 'u' & 'v'
-      // Findind their parent vertices.
+      // Finding their parent vertices.
       int i = find ( u );
       int j = find ( v );
 
