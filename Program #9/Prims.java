@@ -26,12 +26,12 @@ public class Prims {
     // To keep a record of which all vertices have been visited
     int visited[] = new int [ 10 ];
 
-    int u = 0,          // To hold the first edge
-        v = 0,          // To hold the second edge
+    int u = 0,          // First vertex
+        v = 0,          // Second vertex
         k = 0,          // Counter
-        sum = 0,        // To store the cost of Spanning Tree
+        sum = 0,        // Cost of Spanning Tree
         flag = 0,       // To indicate whether MCST exists or not
-        min;            // To hold minimum edge cost
+        min;            // Cost of Minimum edge
     
     // Initially, setting all vertices as not visited
     for ( int i = 1; i <= n; i++ ) {
@@ -49,6 +49,7 @@ public class Prims {
 
       // Traversing through weighted matrix
       // and selecting minimum edge
+      // NOTE: Here 'i' & 'j' indicate as source and destination vertices respectively.
       for ( int i = 1; i <= n; i++ ) {
         for ( int j = 1; j <= n; j++ ) {
 
