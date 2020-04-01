@@ -78,7 +78,7 @@ public class Kruskal {
         for ( int j = 1; j <= n; j++ ) {
 
           // ...and selecting edge which is minimum and also
-          // skipping the iterating if it is a self loop
+          // skipping the iteration if it is a self loop
           if ( a[i][j] < min && i != j ) {
             min = a[i][j];
             u = i;
