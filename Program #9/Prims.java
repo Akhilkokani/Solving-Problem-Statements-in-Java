@@ -1,5 +1,7 @@
 /**
- * Find Minimum Cost Spanning Tree of a given connected undirected graph using Prims's algorithm.
+ * Find Minimum Cost Spanning Tree of a given 
+ * connected undirected graph using Prims's 
+ * algorithm.
  * 
  *
  *
